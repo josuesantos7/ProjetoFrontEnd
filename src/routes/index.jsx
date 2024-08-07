@@ -1,15 +1,20 @@
 import { createBrowserRouter} from 'react-router-dom'
+import Cadastro from "../pages/Cadastro/Cadastro"
 import Login from "../pages/Login/Login"
-import FormLogin from "../pages/Login/FormLogin"
+import Dashboard from "../pages/Dashboad/Dashboard"
 
 
 export const routes = createBrowserRouter([
     {
         path:'/',
-        element: <FormLogin/>,
+        element: <Login/>,
     },
     {
         path:'/cadastrar',
-        element: <Login/>,
+        element: <Cadastro/>,
+    },
+    {
+        path:'/dashboard',
+        element: <Dashboard/>,
     },
 ])

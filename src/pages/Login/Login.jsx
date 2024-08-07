@@ -1,85 +1,35 @@
-import './Login.css'
-import { Link } from "react-router-dom"
 import { useForm } from "react-hook-form"
+import { Link } from "react-router-dom"
+import "./Login.css"
 
 function Login() {
 
     const { register, handleSubmit, formState } = useForm()
-    
-    function criarConta(){
-        alert("Conta criada com sucesso")
+
+    function logarUsuario(){
+        console.log("Login realizado com sucesso")
+        alert("Login realizado com sucesso")
     }
 
     return (
+        <div className="container-login">
+            <div className="card-login">
+            <form className="form-login" onSubmit={handleSubmit(logarUsuario)}>
+                <h1>Login 🌳</h1>
+                <input
+                 type="email" placeholder="Email" {...register ('email', { required: "O email é obrigatório"})}
+                ></input>
+                {formState.errors?.email?.message}
 
-        <div className='container'>
+                <input type="password" placeholder="Senha" {...register ('password', { required: "A senha é obrigatória"})}></input>
+                {formState.errors?.password?.message}
 
-            <div className='container-form-criarConta'>
+                <button type="submit">Logar</button>
 
-                <div className='cadastro'>
-
-                    <form className='form-criarconta' onSubmit={handleSubmit(criarConta)}>
-                        <h1>Criar Conta</h1>
-
-
-                        <div className='organizarInputs'>
-                            <input type='text' placeholder='Nome' {...register('nome', { required: "O nome é obrigatório" })}
-                            ></input >
-                            
-                        </div>
-                        {formState.errors?.nome?.message}
-
-                        {/* SEXO */}
-                        <div className='organizarInputs'>
-                            <input type='text' placeholder='Sexo' {...register('sexo', { required: "O sexo é obrigatório" })}
-                            ></input >
-                            
-                        </div>
-                        {formState.errors?.sexo?.message}
-
-                        {/* cpf */}
-                        <div>
-                            <input type='number' placeholder='CPF' {...register('cpf', { required: "O CPF é obrigatório" })}
-                            ></input >
-                            
-                        </div>
-                        {formState.errors?.cpf?.message}
-
-                        {/* Data Nascimento */}
-                        <div>
-                            <input type='date' placeholder='Data' {...register('DataNascimento', { required: "A data de nascimento é obrigatório" })}
-                            ></input >
-                            
-                        </div>
-                        {formState.errors?.DataNascimento?.message}
-
-                        <div>
-                            <input type='email' placeholder='Email' {...register('email', { required: "O email é obrigatório" })}>
-                            </input>
-                            
-                        </div>
-                        {formState.errors?.email?.message}
-
-                        <div>
-                            <input type='password' placeholder='Senha' {...register('password', { required: "A senha é obrigatória" })}>
-                            </input>
-                            
-                        </div>
-                        {formState.errors?.password?.message}
-                        
-
-                        <button type='submit'>Cadastrar</button>
-
-                        <span>Já possui conta? <Link to='/'>Faça login</Link></span>
-                    </form>
-                </div>
-
-                <div className='imagem-cadastre-se'>
-                    
-                    <img src='https://images.pexels.com/photos/957024/forest-trees-perspective-bright-957024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"'  alt="Árvores" width="100%"></img>
-
-                </div>
+                <span>Ainda não tem cadastro? <Link to='/cadastrar'>Cadastre-se</Link></span>
+            </form>
             </div>
+
         </div>
     )
 }
