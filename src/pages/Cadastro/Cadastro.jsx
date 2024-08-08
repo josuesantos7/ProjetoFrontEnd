@@ -6,69 +6,74 @@ function Cadastro() {
 
     const { register, handleSubmit, formState } = useForm()
     
-    function criarConta(){
-        alert("Conta criada com sucesso")
+    async function criarConta(values){
+        try {
+            const resposta = await fetch("http://localhost:3000/usuarios", {
+                method: "post",
+                body: JSON.stringify(values)
+            })
+            alert("Conta criada com sucesso")
+        } catch (error) {
+            alert("Houve um erro ao cadastrar o usuario")
+        }
     }
 
     return (
 
-        <div className='container'>
+        <div className='containerCriarConta'>
 
             <div className='container-form-criarConta'>
 
                 <div className='cadastro'>
 
                     <form className='form-criarconta' onSubmit={handleSubmit(criarConta)}>
-                        <h1>Criar Conta</h1>
 
+                        <div className='titulo-criarConta'>
+                            <h1>Criar Conta</h1>
+                        </div>
 
                         <div className='organizarInputs'>
                             <input type='text' placeholder='Nome' {...register('nome', { required: "O nome é obrigatório" })}
                             ></input >
-                            
+                            {formState.errors?.nome?.message}
                         </div>
-                        {formState.errors?.nome?.message}
 
                         {/* SEXO */}
                         <div className='organizarInputs'>
                             <input type='text' placeholder='Sexo' {...register('sexo', { required: "O sexo é obrigatório" })}
                             ></input >
-                            
+                            {formState.errors?.sexo?.message}
                         </div>
-                        {formState.errors?.sexo?.message}
 
                         {/* cpf */}
-                        <div>
+                        <div className='organizarInputs'>
                             <input type='number' placeholder='CPF' {...register('cpf', { required: "O CPF é obrigatório" })}
                             ></input >
-                            
+                             {formState.errors?.cpf?.message}
                         </div>
-                        {formState.errors?.cpf?.message}
 
                         {/* Data Nascimento */}
-                        <div>
+                        <div className='organizarInputs'>
                             <input type='date' placeholder='Data' {...register('DataNascimento', { required: "A data de nascimento é obrigatório" })}
                             ></input >
-                            
+                            {formState.errors?.DataNascimento?.message}
                         </div>
-                        {formState.errors?.DataNascimento?.message}
 
-                        <div>
+                        <div className='organizarInputs'>
                             <input type='email' placeholder='Email' {...register('email', { required: "O email é obrigatório" })}>
                             </input>
-                            
+                            {formState.errors?.email?.message}
                         </div>
-                        {formState.errors?.email?.message}
-
-                        <div>
+  
+                        <div className='organizarInputs'>
                             <input type='password' placeholder='Senha' {...register('password', { required: "A senha é obrigatória" })}>
                             </input>
-                            
+                            {formState.errors?.password?.message}
                         </div>
-                        {formState.errors?.password?.message}
                         
-
-                        <button type='submit'>Cadastrar</button>
+                        <div className='botao-cadastrar'>
+                            <button type='submit'>Cadastrar</button>
+                        </div>
 
                         <span>Já possui conta? <Link to='/'>Faça login</Link></span>
                     </form>

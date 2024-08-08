@@ -1,0 +1,19 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "admin",
+      "email:": "admin@email.com",
+      "senha": 123456
+    },
+    {
+      "id": "b677",
+      "nome": "josue",
+      "sexo": "masculino",
+      "cpf": "456456",
+      "DataNascimento": "1999-06-09",
+      "email": "josueteste@gmail.com",
+      "password": "123"
+    }
+  ]
+}

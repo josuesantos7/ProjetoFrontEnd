@@ -3,22 +3,24 @@
     padding: 0;
 }
 
-.container {
+.containerCriarConta {
     display: flex;
     height: 100%;
     justify-content: center;
     align-items: center;
-    background-color: black;
 }
 
 .container-form-criarConta {
-    display: flex;
+    display: flex; 
     width: 100%;
     height: 100vh;
 }
 
 .cadastro {
-    width: 80%;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: center;
 }
 
 .imagem-cadastre-se {
@@ -29,7 +31,7 @@
 
 .imagem-cadastre-se img {
     background-size: 100%;
-    height: 105vh;
+    height: 100vh;
 }
 
 .form-criarconta {
@@ -37,35 +39,55 @@
     height: 100%;
     background-color: aqua;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 60px 50px 50px 50px 50px;
-    padding-left: 30px;
-    padding-right: 30px;
+    grid-template-rows: 70px 50px 50px 50px 50px;
+    padding-left: 45px;
     padding-top: 35px;
+    gap: 0px 25px;
 }
 
-.form-criarconta h1 {
-    height: 30px;
+.titulo-criarConta {
+    display: flexbox;
+    width: 100%;
     grid-column: span 2;
-    text-align: start;
-    padding-top: 10px;
-    padding-bottom: 15px;
+    align-items: center;
 }
 
-.form-criarconta button {
+.titulo-criarConta h1 {
     display: flex;
     grid-column: span 2;
+    width: 100%;
+    justify-content: start;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+}
+
+.organizarInputs {
+    display: flex;
+    max-width: 184px;
+    height: 27.2px;
+    flex-direction: column;
+}
+
+.botao-cadastrar {
+    display: flex;
+    grid-column: span 2;
+    justify-content: center;
     text-align: center;
     align-items: center;
-    justify-content: center;
-    margin-left: 32%;
-    margin-right: 25%;
+    margin-left: -45px;
+}
+
+.botao-cadastrar button {
+    width: 150px;
     border-radius: 12px;
-    height: 35px;
-    width: 250px;
+    background-color: rgb(32, 199, 124);
 }
 
 .form-criarconta span {
+    margin-top: 5px;
     grid-column: span 2;
     text-align: center;
     height: 50px;
+    margin-left: -45px;
 }
