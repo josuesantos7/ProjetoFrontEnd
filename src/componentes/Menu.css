@@ -13,10 +13,16 @@
 .menu-opcoes {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     gap: 15px;
-    margin-top: 16px;
+    margin-top: 20px;
+    margin-left: 35px;
 
+}
+
+.menu-itens {
+    display: flex;
+    gap: 8px; 
 }
 
 .hiperlink {
@@ -26,7 +32,9 @@
 
 .exit {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    /* align-items: center; */
+    /* text-align: center; */
+    margin-left: 35px;
     margin-bottom: 20px;
 }

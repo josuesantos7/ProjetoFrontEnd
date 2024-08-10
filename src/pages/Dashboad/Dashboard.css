@@ -3,3 +3,46 @@
     display: flex;
     height: 100vh;
 }
+
+.main-dashboard{
+    padding-left: 30px;
+}
+
+.block-user-locais {
+    display: flex;
+    gap: 30px;
+}
+
+.card-user-locais {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    width: 352px;
+    height: 145px;
+    border-radius: 8px;
+    color: white;
+    padding-left: 25px;
+    padding-right: 25px;
+    justify-content: center;
+    gap: 30px;
+}
+
+.conteudo-usuarios{
+    display: flex;
+    justify-content: space-between;
+    color: yellow;
+    font-size: 30px;
+}
+
+.conteudo-locais{
+    display: flex;
+    justify-content: space-between;
+    color: yellow;
+    font-size: 30px;
+}
+
+.area-locais {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
