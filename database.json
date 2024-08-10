@@ -14,6 +14,15 @@
       "DataNascimento": "1999-06-09",
       "email": "josueteste@gmail.com",
       "password": "123"
+    },
+    {
+      "id": "cc5c",
+      "nome": "Teste 2",
+      "sexo": "masculino",
+      "cpf": "03265419530",
+      "DataNascimento": "2024-08-20",
+      "email": "teste2@gmail.com",
+      "password": "123"
     }
   ]
 }
