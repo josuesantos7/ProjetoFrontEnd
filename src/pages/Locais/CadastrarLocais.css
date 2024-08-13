@@ -1,0 +1,29 @@
+
+.container-locais {
+    display: flex;
+    width: 100%;
+}
+
+.titulo-cadastroLocalidade {
+    column-span: 2;
+}
+
+.form-criarlocal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+}
+
+.input-formlocal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.btn-cadastrarLocal {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
