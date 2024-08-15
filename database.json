@@ -24,5 +24,35 @@
       "email": "teste2@gmail.com",
       "password": "123"
     }
+  ],
+  "locais": [
+    {
+      "id": "f60e",
+      "nomeLocal": "teste 1",
+      "descricao": "realizando o teste ",
+      "cep": "123456",
+      "endereco": "1234"
+    },
+    {
+      "id": "d1cd",
+      "nomeLocal": "barra da lagoa",
+      "descricao": "test with the API",
+      "cep": "88061233",
+      "logradouro": "Caminho da Praia",
+      "bairro": "Barra da Lagoa",
+      "cidade": "Florianópolis",
+      "estado": "SC"
+    },
+    {
+      "id": "7c70",
+      "nomeLocal": "teste sem a descrição",
+      "descricao": "",
+      "cep": "88061233",
+      "logradouro": "Caminho da Praia",
+      "bairro": "Barra da Lagoa",
+      "cidade": "Florianópolis",
+      "estado": "SC"
+    }
+    
   ]
 }

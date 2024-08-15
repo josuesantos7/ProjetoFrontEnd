@@ -6,8 +6,46 @@ function CadastrarLocais() {
 
     const { register, handleSubmit, formState } = useForm()
 
-    function CadastrarLocal() {
-        alert("Local Cadastrado!")
+    async function CadastrarLocal(data) {
+
+        const cep = data.cep
+
+        const local = {
+            nomeLocal : data.nomeLocal,
+            descricao : data.descricao,
+            cep : data.cep  
+        }
+
+        try {
+
+            if (cep.length === 8){
+                const answer = await fetch(`https://viacep.com.br/ws/${cep}/json/`)
+                const dados = await answer.json()
+    
+                if (dados.erro) {
+                    throw new Error("CEP não encontrado.");
+                }
+    
+                local.logradouro = dados.logradouro;
+                local.bairro = dados.bairro;
+                local.cidade = dados.localidade;
+                local.estado = dados.uf;
+    
+                const resposta = await fetch("http://localhost:3000/locais", {
+                    method: "post",
+                    body: JSON.stringify(local)
+                })
+
+                alert("Local cadastrado com sucesso!!!")
+            } 
+            else {
+                throw new Error("CEP inválido.");
+            }
+            
+        } catch (error) {
+            console.error("Erro:", error.message);
+            alert(`Erro: ${error.message}`);
+        } 
     }
 
     return (
