@@ -1,7 +1,57 @@
 import "./Dashboard.css"
 import Menu from "../../componentes/Menu"
+import React, { useState, useEffect } from 'react';
+
 
 function Dashboard() {
+
+    const [locais, setLocais] = useState([]);
+    const [qtdUsuarios, setqtdUsuarios] = useState(0);
+    const [qtdLocais, setqtdLocais] = useState(0)
+
+    async function obterLocais() {
+        try {
+            const resposta = await fetch("http://localhost:3000/locais", {
+                method: "GET"
+            });
+
+            if (!resposta.ok) {
+                throw new Error("Erro ao buscar os locais.");
+            }
+
+            const dados = await resposta.json();
+            setLocais(dados);
+            setqtdLocais(dados.length);
+        } catch (error) {
+            console.error("Erro:", error.message);
+            alert(`Erro: ${error.message}`);
+        }
+    }
+
+
+    async function obterqtdUsuarios() {
+        try {
+            const resposta = await fetch("http://localhost:3000/usuarios", {
+                method: "GET"
+            });
+
+            if (!resposta.ok) {
+                throw new Error("Erro ao buscar os usuários.");
+            }
+
+            const dados = await resposta.json();
+            setqtdUsuarios(dados.length); // Atualiza o número de usuários
+        } catch (error) {
+            console.error("Erro:", error.message);
+            alert(`Erro: ${error.message}`);
+        }
+    }
+
+    useEffect(() => {
+        obterLocais();
+        obterqtdUsuarios()
+    }, []);
+
     return (
         <div className="container-dashboard">
             <div className="container-menu">
@@ -22,7 +72,7 @@ function Dashboard() {
 
                         <div className="conteudo-usuarios">
                             <div>
-                                0
+                                {qtdUsuarios}
                             </div>
 
                             <div>
@@ -42,7 +92,7 @@ function Dashboard() {
 
                         <div className="conteudo-locais">
                             <div>
-                                0
+                                {qtdLocais}
                             </div>
 
                             <div>
@@ -61,21 +111,19 @@ function Dashboard() {
 
                     <table>
                             <thead>
-                                <tr>
+                                <tr className="tr-coluna">
                                     <th>Local</th>
-                                    <th>Latitude</th>
-                                    <th>Longitude</th>
+                                    <th>Usuário</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 
-                                {/* {locais.map((local, index) => (
+                                {locais.map((local, index) => (
                                     <tr key={index}>
-                                        <th>{local.nome}</th>
+                                        <th>{local.nomeLocal}</th>
                                         <th>{local.latitude}</th>
-                                        <th>{local.longitude}</th>
                                     </tr>
-                                ))} */}
+                                ))}
                             </tbody>
                         </table>
                 </div>

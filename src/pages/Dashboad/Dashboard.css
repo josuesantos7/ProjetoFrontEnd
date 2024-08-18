@@ -46,3 +46,7 @@
     flex-direction: column;
     margin-top: 30px;
 }
+
+.tr-coluna {
+    background-color: rgb(156, 151, 145);
+}
