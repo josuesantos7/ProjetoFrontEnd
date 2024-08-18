@@ -33,3 +33,14 @@ input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
+.input-formlocal-endereco {
+    display: flex;
+    margin-top: 4px;
+    justify-content: space-between;
+}
+
+.itens-form-endereco {
+    display: flex;
+    flex-direction: column;
+}

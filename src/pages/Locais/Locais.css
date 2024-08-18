@@ -1,0 +1,34 @@
+
+.containerLocais {
+    display: flex;
+}
+
+.main-locais {
+    margin-left: 35px;
+    margin-top: 20px;
+    width: 70%;
+}
+
+.titulo-locais {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-cadastrarNewLocal {
+    border-radius: 10px;
+    width: auto;
+    height: 35px;
+    padding: 2px;
+}
+
+table {
+    width: 100%;
+    border: 1px solid;
+}
+
+.edit-delete {
+    display: flex;
+    flex-direction: columns;
+    padding-left: 8px;
+}
+
