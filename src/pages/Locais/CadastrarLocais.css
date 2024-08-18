@@ -1,0 +1,46 @@
+
+.container-locais {
+    display: flex;
+    width: 100%;
+}
+
+.titulo-cadastroLocalidade {
+    column-span: 2;
+}
+
+.form-criarlocal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+}
+
+.input-formlocal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.btn-cadastrarLocal {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input-formlocal-endereco {
+    display: flex;
+    margin-top: 4px;
+    justify-content: space-between;
+}
+
+.itens-form-endereco {
+    display: flex;
+    flex-direction: column;
+}

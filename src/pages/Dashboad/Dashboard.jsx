@@ -58,6 +58,26 @@ function Dashboard() {
                 <div className="area-locais">
                     <h2>Locais</h2>
                     <span>Lista das localidades cadastradas</span>
+
+                    <table>
+                            <thead>
+                                <tr>
+                                    <th>Local</th>
+                                    <th>Latitude</th>
+                                    <th>Longitude</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                {/* {locais.map((local, index) => (
+                                    <tr key={index}>
+                                        <th>{local.nome}</th>
+                                        <th>{local.latitude}</th>
+                                        <th>{local.longitude}</th>
+                                    </tr>
+                                ))} */}
+                            </tbody>
+                        </table>
                 </div>
             </div>
 
