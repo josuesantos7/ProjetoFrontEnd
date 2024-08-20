@@ -4,16 +4,16 @@ Consiste em uma aplicação front end, que será o cartão postal para usuários
 
 ## 💻 Tecnologias usadas
 Front-end: HTML, CSS, JavaScript,
-Ferramentas: Visual Studio Code, GitHub, Trello, Postman e PgAdmin4.
+Ferramentas: Visual Studio Code, GitHub, Trello, Bootstrap.
 ## ☁️ Banco de dados
-Para essa aplicação, foi usado o banco de dados PostgreSql, sendo necessário a instalação do PostgreSql e do pgAdmin4 na máquina.
+Para essa aplicação, foi usado o json server, para simular um banco de dados.
 
 ## Rodar o repositório:
 ### Pré-requisitos
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas: Git, Node.js. Além disto é bom ter um editor para trabalhar com o código como VSCode
 
 ### Clone o repositório
-git clone <https://github.com/josuesantos7/ProjetoNature365.git>
+git clone <https://github.com/josuesantos7/ProjetoFrontEnd.git>
 
 ### Acesse a pasta do projeto no terminal/cmd
 cd PROJETO NATURE365
