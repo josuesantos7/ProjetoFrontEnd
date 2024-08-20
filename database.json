@@ -1,0 +1,74 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "admin",
+      "email:": "admin@email.com",
+      "senha": 123456
+    },
+    {
+      "id": "b677",
+      "nome": "josue",
+      "sexo": "masculino",
+      "cpf": "456456",
+      "DataNascimento": "1999-06-09",
+      "email": "josueteste@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "cc5c",
+      "nome": "Teste 2",
+      "sexo": "masculino",
+      "cpf": "03265419530",
+      "DataNascimento": "2024-08-20",
+      "email": "teste2@gmail.com",
+      "password": "123"
+    }
+  ],
+  "locais": [
+    {
+      "id": "d1cd",
+      "nomeLocal": "barra da lagoa",
+      "descricao": "Teste de modal da edit",
+      "cep": "88061233",
+      "logradouro": "Caminho da Praia",
+      "bairro": "Barra da Lagoa",
+      "cidade": "Florianópolis",
+      "estado": "SC",
+      "endereco": "teste"
+    },
+    {
+      "id": "e8fd",
+      "nomeLocal": "Praia de Jurere",
+      "descricao": "Linda praia e um baixo bastante luxuoso.",
+      "cep": "88053350",
+      "logradouro": "Avenida das Lagostas",
+      "bairro": "Jurerê Internacional",
+      "cidade": "Florianópolis",
+      "estado": "SC"
+    },
+    {
+      "id": "072e",
+      "nomeLocal": "Canasvieiras",
+      "descricao": "Lugar cheio de praias exuberantes.",
+      "cep": "88054380",
+      "logradouro": "Alameda Nativa",
+      "bairro": "Canasvieiras",
+      "cidade": "Florianópolis",
+      "estado": "SC",
+      "endereco": "Praia de canasvieira"
+    },
+    {
+      "id": "3355",
+      "nomeLocal": "Teste de adição funções",
+      "descricao": "sds",
+      "cep": "68903022",
+      "logradouro": "Rua Doutor Braulino",
+      "bairro": "Zerão",
+      "cidade": "Macapá",
+      "estado": "AP",
+      "endereco": "rua tal de tal",
+      "numero": "12"
+    }
+  ]
+}
