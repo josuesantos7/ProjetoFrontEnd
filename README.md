@@ -1,5 +1,5 @@
 # Projeto Nature Quest
-Consiste em uma aplicação front end, que será o cartão postal para usuários entrarem no sistema e cadastrarem um novo lugar natural em florianópolis, afim de conecer novos locais o usuário estará compartilhando as informações dos lugares para novos usuários, incluindo visitantes da ilha.
+Consiste em uma aplicação front end, que será o cartão postal para usuários entrarem no sistema e cadastrarem um novo lugar natural em florianópolis, afim de conhecer novos locais o usuário estará compartilhando as informações dos lugares para novos usuários, incluindo visitantes da ilha.
 
 
 ## 💻 Tecnologias usadas
@@ -32,11 +32,11 @@ O servidor inciará na porta:5173 - acesse http://localhost:5173/
 
 
 ## Features
- [x] feature/pagina-login
- [x] feature/pagina-locais
- [x] feature/dashboard
- [x] feature/readme
- [ ]feature/contexto-auth
+ [x] feature/pagina-login <br>
+ [x] feature/pagina-locais <br>
+ [x] feature/dashboard <br>
+ [x] feature/readme <br>
+ [ ]feature/contexto-auth <br>
 
 
 ## Melhorias futuras
