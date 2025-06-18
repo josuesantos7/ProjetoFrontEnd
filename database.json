@@ -3,8 +3,8 @@
     {
       "id": "1",
       "nome": "admin",
-      "email:": "admin@email.com",
-      "senha": 123456
+      "email": "admin@email.com",
+      "password": 123456
     },
     {
       "id": "b677",
